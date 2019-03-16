@@ -4,13 +4,13 @@
 #
 Name     : R-numDeriv
 Version  : 2016.8.1
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/numDeriv_2016.8-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/numDeriv_2016.8-1.tar.gz
 Summary  : Accurate Numerical Derivatives
 Group    : Development/Tools
 License  : GPL-2.0
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 numerical first and second order derivatives. Accurate calculations 
@@ -29,11 +29,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521216451
+export SOURCE_DATE_EPOCH=1552779822
 
 %install
+export SOURCE_DATE_EPOCH=1552779822
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521216451
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -68,8 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library numDeriv|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  numDeriv || :
 
 
 %files
@@ -98,3 +97,10 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/numDeriv/help/paths.rds
 /usr/lib64/R/library/numDeriv/html/00Index.html
 /usr/lib64/R/library/numDeriv/html/R.css
+/usr/lib64/R/library/numDeriv/tests/BWeg.R
+/usr/lib64/R/library/numDeriv/tests/CSD.R
+/usr/lib64/R/library/numDeriv/tests/grad01.R
+/usr/lib64/R/library/numDeriv/tests/hessian01.R
+/usr/lib64/R/library/numDeriv/tests/jacobian01.R
+/usr/lib64/R/library/numDeriv/tests/oneSided.R
+/usr/lib64/R/library/numDeriv/tests/trig01.R

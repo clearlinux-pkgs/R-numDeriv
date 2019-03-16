@@ -1,1 +1,14 @@
 # This file contains recursive sources that require this package
+R-BB
+R-Rcgmin
+R-bbmle
+R-emmeans
+R-lava
+R-lavaan
+R-lmerTest
+R-optextras
+R-optimx
+R-ordinal
+R-phytools
+R-sn
+R-survey
