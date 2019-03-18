@@ -1,8 +1,10 @@
 # This file contains recursive sources that require this package
 R-BB
 R-Rcgmin
+R-SGP
 R-bbmle
 R-emmeans
+R-fAssets
 R-lava
 R-lavaan
 R-lmerTest
@@ -12,3 +14,4 @@ R-ordinal
 R-phytools
 R-sn
 R-survey
+R-tclust
