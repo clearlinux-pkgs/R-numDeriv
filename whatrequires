@@ -1,12 +1,8 @@
 # This file contains recursive sources that require this package
 R-BB
 R-Rcgmin
-R-Rvmmin
-R-SGP
-R-afex
 R-bbmle
 R-emmeans
-R-fAssets
 R-lava
 R-lavaan
 R-lmerTest

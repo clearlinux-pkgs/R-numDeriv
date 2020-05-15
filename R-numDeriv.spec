@@ -4,7 +4,7 @@
 #
 Name     : R-numDeriv
 Version  : 2016.8.1.1
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/numDeriv_2016.8-1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/numDeriv_2016.8-1.1.tar.gz
 Summary  : Accurate Numerical Derivatives
@@ -23,21 +23,22 @@ numerical first and second order derivatives. Accurate calculations
 
 %prep
 %setup -q -c -n numDeriv
+cd %{_builddir}/numDeriv
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1559898421
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1589511908
 
 %install
-export SOURCE_DATE_EPOCH=1559898421
+export SOURCE_DATE_EPOCH=1589511908
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -63,7 +64,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
