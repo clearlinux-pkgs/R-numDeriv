@@ -4,7 +4,7 @@
 #
 Name     : R-numDeriv
 Version  : 2016.8.1.1
-Release  : 31
+Release  : 32
 URL      : https://cran.r-project.org/src/contrib/numDeriv_2016.8-1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/numDeriv_2016.8-1.1.tar.gz
 Summary  : Accurate Numerical Derivatives
