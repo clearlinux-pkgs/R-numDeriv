@@ -1,15 +1,19 @@
 # This file contains recursive sources that require this package
 R-BB
 R-Rcgmin
+R-alabama
 R-bbmle
+R-distributional
 R-emmeans
+R-flexsurv
 R-lava
 R-lavaan
 R-lmerTest
+R-mlt
 R-optextras
 R-optimx
 R-ordinal
+R-pbkrtest
 R-phytools
 R-sn
 R-survey
-R-tclust
